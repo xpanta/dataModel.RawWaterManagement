@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "# { todo } #",
+    "title": "Greek National Water Company - Water Management System - PointfMeasurement",
+    "description": "This entity contains a first version of the main location where water quality measurements are taken",
+    "type": "object",    
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Junction"
+                    ],
+                    "description": "NGSI-LD Entity Type"
+                },
+                "elevation": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "demandeCategory": {
+                    "$ref": "#/definitions/demand"
+                },
+                "tag": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "initialQuality": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "description": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "emitterCoefficient": {
+                    "$ref": "../WaterNetworkManagement-schema.json#/definitions/ngsildProperty"
+                },
+                "sourceCategory": {
+                    "$ref": "#/definitions/source"
+                }
+            }
+        }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location",
+        "elevation"
+    ]
+}
