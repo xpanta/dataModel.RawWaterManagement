@@ -12,16 +12,16 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "enum": ["RawWaterQualiltyObserved"],
+                    "enum": ["RawWaterFlowObserved"],
                     "description": "NGSI-LD Entity Type"
                 },
-                "conductivity": {
+                "velocity": {
                     "$ref": "../RawWaterManagement-schema.json#/definitions/ngsildProperty"
                 },
-                "temperature": {
+                "water_depth": {
                     "$ref": "../RawWaterManagement-schema.json#/definitions/ngsildProperty"
                 },
-                "turbidity": {
+                "flow_rate": {
                     "$ref": "../RawWaterManagement-schema.json#/definitions/ngsildProperty"
                 }
             },
@@ -33,9 +33,9 @@
         {"required": ["id"]},
         {"required": ["location"]}
     ],"anyOf": [
-        {"required": ["conductivity"]},
-        {"required": ["turbidity"]},
-        {"required": ["temperature"]}
+        {"required": ["velocity"]},
+        {"required": ["water_depth"]},
+        {"required": ["flow_rate"]}
     ],
     
 }

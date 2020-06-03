@@ -12,9 +12,7 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "enum": [
-                        "PointfMeasurement"
-                    ],
+                    "enum": ["PointfMeasurement"],
                     "description": "NGSI-LD Entity Type"
                 },
                 "elevation": {
